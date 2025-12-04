@@ -107,6 +107,21 @@ sayilar.forEach((sayi) => {
 ucebolunenlerintoplami = ucetambolunenler.reduce((toplam, sayi) => toplam + sayi, 0); 
 
 besyuzdenkucuksayilar = sayilar.filter((sayi) => sayi < 500);
+
+tekraredensayilar = [];
+
+let sayacNesnesi = {};
+
+for (let i = 0; i < sayilar.length; i++) {
+  const sayi = sayilar[i];
+  sayacNesnesi[sayi] = (sayacNesnesi[sayi] || 0) + 1;
+}
+
+for (let sayi in sayacNesnesi) {
+  if (sayacNesnesi[sayi] > 1) {
+    tekraredensayilar.push(`${sayi} sayısı ${sayacNesnesi[sayi]} kere tekrar edilmiştir`);
+  }
+}
 /*  (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın */
 
 let ucetambolunenler,
