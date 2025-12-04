@@ -103,6 +103,10 @@ ucetambolunenler = [];
 sayilar.forEach((sayi) => {
   if (sayi % 3 === 0) ucetambolunenler.push(sayi);
 });
+
+ucebolunenlerintoplami = ucetambolunenler.reduce((toplam, sayi) => toplam + sayi, 0); 
+
+besyuzdenkucuksayilar = sayilar.filter((sayi) => sayi < 500);
 /*  (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın */
 
 let ucetambolunenler,
