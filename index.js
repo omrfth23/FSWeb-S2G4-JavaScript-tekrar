@@ -99,6 +99,10 @@ for (let i = 0; i < sayilar.length; i++) {
   if (sayilar[i] > enbuyuk) enbuyuk = sayilar[i];
 }
 
+ucetambolunenler = [];
+sayilar.forEach((sayi) => {
+  if (sayi % 3 === 0) ucetambolunenler.push(sayi);
+});
 /*  (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın */
 
 let ucetambolunenler,
