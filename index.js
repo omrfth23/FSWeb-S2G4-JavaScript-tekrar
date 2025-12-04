@@ -91,6 +91,18 @@ console.log(CemberinAlani(15, pi));
 		💡 İPUCU: Tekrar edilen sayıları ve kaç kere tekrar edildiğini kaydetmek için bir nesne tanımlamalısınız, bu görevi yapabilmek için en az 2 kere döngü yazmalısınız. Birinci döngüde hangi sayının kaç kere tekrar edildiğini tespit edip, 2. döngüde stringi oluşturup verilen diziye aktarmalısınız.
 */
 
+/*  (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın */
+
+let ucetambolunenler,
+  enkucuk,
+  enbuyuk,
+  ucebolunenlerintoplami,
+  besyuzdenkucuksayilar,
+  siralisayilar,
+  tekraredensayilar;
+
+// 3a çözümü
+
 enkucuk = sayilar[0];
 enbuyuk = sayilar[0];
 
@@ -99,14 +111,33 @@ for (let i = 0; i < sayilar.length; i++) {
   if (sayilar[i] > enbuyuk) enbuyuk = sayilar[i];
 }
 
+
+// 3b çözümü:
+
 ucetambolunenler = [];
 sayilar.forEach((sayi) => {
-  if (sayi % 3 === 0) ucetambolunenler.push(sayi);
+  if (sayi % 3 === 0) {
+    ucetambolunenler.push(sayi);
+  }
 });
 
-ucebolunenlerintoplami = ucetambolunenler.reduce((toplam, sayi) => toplam + sayi, 0); 
+
+// 3c çözümü:
+
+ucebolunenlerintoplami = ucetambolunenler.reduce((toplam, sayi) => toplam + sayi, 0);
+
+
+// 3d çözümü
 
 besyuzdenkucuksayilar = sayilar.filter((sayi) => sayi < 500);
+
+
+// 3e çözümü
+
+siralisayilar = [...besyuzdenkucuksayilar].sort((a, b) => a - b);
+
+
+// 3f çözümü
 
 tekraredensayilar = [];
 
@@ -122,39 +153,6 @@ for (let sayi in sayacNesnesi) {
     tekraredensayilar.push(`${sayi} sayısı ${sayacNesnesi[sayi]} kere tekrar edilmiştir`);
   }
 }
-/*  (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın */
-
-let ucetambolunenler,
-  enkucuk,
-  enbuyuk,
-  ucebolunenlerintoplami,
-  besyuzdenkucuksayilar,
-  siralisayilar,
-  tekraredensayilar;
-
-// 3a çözümü
-
-/* kodlar buraya */
-
-// 3b çözümü:
-
-/* kodlar buraya */
-
-// 3c çözümü:
-
-/* kodlar buraya */
-
-// 3d çözümü
-
-/* kodlar buraya */
-
-// 3e çözümü
-
-/* kodlar buraya */
-
-// 3f çözümü
-
-/* kodlar buraya */
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
